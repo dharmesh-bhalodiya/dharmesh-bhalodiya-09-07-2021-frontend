@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-error {
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: -9px;
+}
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+    background-color: #875cd4;
+}
+.mat-form-field-infix {
+    width: 460px !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: transparent
+}
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    padding-left: 0px !important;
+}
+
+.logo_img {
+    width: 52px;
+    vertical-align: middle;
+}
+.welcome_text {
+    font-size: 16px;
+    margin-top: 0em;
+    color: #333;
+}
+.fa-sign-out {
+    margin-left: 5px;
+}

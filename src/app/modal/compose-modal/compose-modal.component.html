@@ -1,0 +1,27 @@
+<div mat-dialog-title>
+  <div class="vl">
+    <p class="title">New Message</p>
+  </div>
+</div>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>To</mat-label>
+    <input matInput>
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>From</mat-label>
+    <input matInput>
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>Subject</mat-label>
+    <input matInput>
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Message</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-dialog-close mat-button (click)="sendMessage()">Send</button>
+</div>

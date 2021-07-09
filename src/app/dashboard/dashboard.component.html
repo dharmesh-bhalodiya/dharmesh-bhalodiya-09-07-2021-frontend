@@ -1,0 +1,99 @@
+<header>
+    <mat-toolbar>
+        <span class="logo_text"><img src="assets/image.png" alt="Logo" class="logo_img img-responsive"> Herolo
+            Message</span>
+        <span class="example-spacer"></span>
+        <div class="logout_link">
+            <a class="logout_link" (click)="logout()">Logout <i class="fa fa-sign-out"></i>
+            </a>
+        </div>
+    </mat-toolbar>
+</header>
+
+<div class="container">
+    <div class="">
+        <p class="welcome_text">Welcome,</p>
+    </div>
+    <button mat-button (click)="openDialog()">Write a Message</button>
+
+    <mat-card class="main_card">
+        <div class="main_title">
+            <p class="title1">Messages</p>
+        </div>
+        <mat-tab-group mat-align-tabs="end" animationDuration="0ms">
+            <mat-tab label="Receive">
+                <div class="row">
+                    <a class="detail_link" [routerLink]="['/message-detail']">
+                        <div class="sub_card">
+                            <mat-toolbar>
+                                <h3 class="mat-card-title">Subject 1</h3>
+                                <p class="card_subtitle">By Dharmesh Bhalodiya</p>
+                                <span class="example-spacer"></span>
+                                <i class="fa fa-arrow-left icon"></i>
+                                <div class="time_class">
+                                    <p class="time_class">10 min ago</p>
+                                </div>
+                            </mat-toolbar>
+                        </div>
+                    </a>
+                    <a class="detail_link" [routerLink]="['/message-detail']">
+                        <div class="sub_card">
+                            <mat-toolbar>
+                                <h3 class="mat-card-title">Subject 2</h3>
+                                <p class="card_subtitle">By Nevil</p>
+                                <span class="example-spacer"></span>
+                                <i class="fa fa-arrow-left icon"></i>
+                                <div class="time_class">
+                                    <p class="time_class">1 hour ago</p>
+                                </div>
+                            </mat-toolbar>
+                        </div>
+                    </a>
+                </div>
+            </mat-tab>
+            <mat-tab label="Sent">
+                <div class="row">
+                    <a class="detail_link" [routerLink]="['/message-detail']">
+                        <div class="sub_card">
+                            <mat-toolbar>
+                                <h3 class="mat-card-title">Subject 1</h3>
+                                <p class="card_subtitle">To Dharmesh Bhalodiya</p>
+                                <span class="example-spacer"></span>
+                                <i class="fa fa-arrow-right icon"></i>
+                                <div class="time_class">
+                                    <p class="time_class">10 min ago</p>
+                                    
+                                </div>
+                            </mat-toolbar>
+                        </div>
+                    </a>
+                    <a class="detail_link" [routerLink]="['/message-detail']">
+                        <div class="sub_card">
+                            <mat-toolbar>
+                                <h3 class="mat-card-title">Subject 2</h3>
+                                <p class="card_subtitle">To Nevil</p>
+                                <span class="example-spacer"></span>
+                                <i class="fa fa-arrow-right icon"></i>
+                                <div class="time_class">
+                                    <p class="time_class">1 hour ago</p>
+                                </div>
+                            </mat-toolbar>
+                        </div>
+                    </a>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card>
+
+
+<!-- <footer>
+    <div class="copyright">
+        <span class="">&copy;copyright iView Labs Pvt. Ltd. {{currentYear}}</span>
+    
+    </div>
+</footer> -->
+
+
+
+
+</div>

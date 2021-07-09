@@ -1,0 +1,101 @@
+.logout_link {
+    float: right;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.logout_link:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+.container {
+    padding: 30px 6em;
+}
+header {
+    background-color: #875cd4;
+    padding: 20px;
+}
+.logo_text {
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+    margin-left: 2em;
+}
+.logout_link {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: right;
+    margin-right: 2em;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+.mat-toolbar {
+    background: transparent;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+    display: contents;
+    padding: 0px 0px;
+}
+.fa-chevron-circle-left {
+    font-size: 45px;
+    color: #875cd4;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.mat-card {
+    height: auto;
+    border: 1px solid #d5d5d5;
+    margin-top: 10px;
+    width: 900px;
+    margin: auto;
+}
+.mat-card-title {
+    font-size: 18px;
+    font-weight: 400;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: -3px;
+}
+.card_subtitle {
+    font-size: 12px;
+    margin-top: -10px;
+    color: darkgray;
+    font-weight: 400;
+}
+.time_class {
+    margin-top: -55px;
+    margin-right: 0em;
+    text-align: right;
+    font-size: 12px !important;
+    color: darkgray;
+    font-weight: 400;
+}
+.card {
+    border-bottom: 1px solid #d5d5d5;
+}
+.message_body {
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 15px;
+    color: lightslategray;
+    font-weight: 300;
+}
+.mat-button {
+    margin-left: auto;
+    display: block;
+    background: transparent;
+    margin-top: -40px;
+    color: #875cd4;
+    border: 2px solid #875cd4;
+}
