@@ -1,0 +1,80 @@
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+.container {
+    padding: 10px;
+}
+.form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+}
+.form-element {
+    padding: 5px 0px 0px 2px;
+    width: 100%;
+}
+.button {
+    width: 35%;
+    margin: auto;
+    display: block;
+}
+.title {
+    color: #875cd4;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 32px;
+    padding: 12px;
+}
+.submit_btn {
+    margin-top: 50px;
+    padding: 5px;
+    font-size: 20px;
+}
+.vl {
+    border-left: 4px solid #875cd4;
+    height: 45px;
+    margin-bottom: 45px;
+}
+.card_layout {
+    height: 330px;
+    border: 1px solid #d5d5d5;
+}
+.mat-card {
+    padding: 25px;
+    margin-top: 7em;
+}
+header {
+    background-color: #875cd4;
+    padding: 20px;
+}
+.logo_text {
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+    margin-left: 2em;
+}
+.login_link {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: right;
+    margin-right: 2em;
+    margin-top: -35px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+.mat-toolbar {
+    background: transparent;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+    display: contents;
+    padding: 0px 0px;
+}

@@ -1,0 +1,61 @@
+<header>
+    <mat-toolbar>
+        <span class="logo_text"><img src="assets/image.png" alt="Logo" class="logo_img img-responsive"> Herolo
+            Message</span>
+        <span class="example-spacer"></span>
+        <div class="logout_link">
+            <a class="logout_link" (click)="logout()">Logout <i class="fa fa-sign-out"></i>
+            </a>
+        </div>
+    </mat-toolbar>
+</header>
+
+<div class="container">
+    <div class="">
+        <p class="welcome_text">Welcome,</p>
+    </div>
+    <button mat-button (click)="openDialog()">Write a Message</button>
+
+    <i [routerLink]="['/dashboard']" class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+    <div class="row">
+        <mat-card>
+            <div class="card">
+                <mat-toolbar>
+                    <h3 class="mat-card-title">Subject 1</h3>
+                    <p class="card_subtitle">By Dharmesh Bhalodiya</p>
+                    <span class="example-spacer"></span>
+                    <div class="time_class">
+                        <p class="time_class">10 min ago</p>
+                    </div>
+                </mat-toolbar>
+            </div>
+            <div class="inner_message_card">
+                <p class="message_body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem placeat ullam nemo iusto illum
+                    reiciendis quibusdam laudantium adipisci voluptate perferendis, ducimus facere odio eum veniam magni
+                    alias soluta asperiores? Dolorum? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Autem placeat ullam nemo iusto illum reiciendis quibusdam laudantium adipisci voluptate perferendis,
+                    ducimus facere odio eum veniam magni alias soluta asperiores? Dolorum?Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Autem placeat ullam nemo
+                    iusto illum reiciendis quibusdam laudantium adipisci voluptate perferendis, ducimus facere odio eum
+                    veniam magni alias soluta asperiores? Dolorum?
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem placeat ullam nemo iusto illum
+                    reiciendis quibusdam laudantium adipisci voluptate perferendis, ducimus facere odio eum veniam magni
+                    alias soluta asperiores? Dolorum? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Autem placeat ullam nemo iusto illum reiciendis quibusdam laudantium adipisci voluptate perferendis,
+                    ducimus facere odio eum veniam magni alias soluta asperiores? Dolorum?Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Autem placeat ullam nemo
+                    iusto illum reiciendis quibusdam laudantium adipisci voluptate perferendis, ducimus facere odio eum
+                    veniam magni alias soluta asperiores? Dolorum?
+                </p>
+                <p class="message_body">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem placeat ullam nemo iusto illum
+                    reiciendis quibusdam laudantium adipisci voluptate perferendis, ducimus facere odio eum veniam magni
+                    alias soluta asperiores? Dolorum? Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                </p>
+            </div>
+
+        </mat-card>
+    </div>
+
+</div>

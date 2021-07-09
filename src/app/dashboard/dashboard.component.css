@@ -1,0 +1,114 @@
+.logout_link {
+    float: right;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+.logout_link:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+.container {
+    padding: 30px 6em;
+}
+
+header {
+    background-color: #875cd4;
+    padding: 20px;
+}
+.logo_text {
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+    margin-left: 2em;
+}
+.logout_link {
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: right;
+    margin-right: 2em;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+.mat-toolbar {
+    background: transparent;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+    display: contents;
+    padding: 0px 0px;
+}
+.mat-button {
+    margin-left: auto;
+    display: block;
+    background: transparent;
+    margin-top: -40px;
+    color: #875cd4;
+    border: 2px solid #875cd4;
+}
+.mat-card {
+    height: auto;
+    border: 1px solid #d5d5d5;
+    padding-bottom: 40px;
+    width: 900px;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 25px;
+}
+.mat-card-title {
+    font-size: 18px;
+    font-weight: 400;
+    width: 350px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: -3px;
+}
+.card_subtitle {
+    font-size: 12px;
+    margin-top: -12px;
+    color: darkgray;
+    font-weight: 400;
+}
+.time_class {
+    margin-top: -55px;
+    margin-right: 0em;
+    text-align: right;
+    font-size: 12px !important;
+    color: darkgray;
+    font-weight: 400;
+}
+.detail_link {
+    text-decoration: none !important;
+}
+.mat-tab-group {
+    /* margin-bottom: 48px; */
+    margin-top: -45px;
+}
+.main_title {
+    margin-top: 45px;
+}
+
+.sub_card {
+    margin-top: 20px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.title1 {
+    font-size: 35px;
+    color: #875cd4;
+}
+.icon {
+    float: right;
+    margin-top: -50px;
+    margin-right: 65px;
+    color: lightgray;
+}

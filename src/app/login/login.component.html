@@ -1,0 +1,29 @@
+<header>
+    <mat-toolbar>
+        <span class="logo_text"><img src="assets/image.png" alt="Logo" class="logo_img img-responsive"> Herolo Message</span>
+        <span class="example-spacer"></span>
+        <div class="login_link">
+            <a class="login_link" [routerLink]="['/']">Login</a>
+        </div>
+    </mat-toolbar>
+</header>
+
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" class="form">
+        <mat-card class="card_layout">
+            <div class="vl">
+                <p class="title">LOGIN</p>
+            </div>
+            <mat-form-field appearance="fill" floatLabel="never" class="form-element">
+                <input type="text" matInput placeholder="Username" formControlName="username" required>
+                <mat-error *ngIf="loginForm.controls['username'].invalid">
+                    {{getError('user')}}
+                </mat-error>
+            </mat-form-field>
+            <div class="form-element">
+                <button mat-raised-button color="primary" type="submit" class="button submit_btn"
+                    [disabled]="!loginForm.valid">Submit</button>
+            </div>
+        </mat-card>
+    </form>
+</div>
