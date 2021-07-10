@@ -111,7 +111,7 @@ export class DashboardComponent implements OnInit {
       });
   }
 
-  openDialog(id) {
+  openDialog() {
     const modelRef = this.dialog.open(ComposeModalComponent);
     modelRef.afterClosed().subscribe(result => {
       if (result) {
