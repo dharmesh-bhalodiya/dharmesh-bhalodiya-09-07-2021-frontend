@@ -10,9 +10,9 @@
     </mat-toolbar>
 </header>
 
-<div class="container">
+<div class="container" style="min-height: 72vh;">
     <div class="">
-        <p class="welcome_text">Welcome,</p>
+        <p class="welcome_text">Welcome, {{currentUser}}</p>
     </div>
     <button mat-button (click)="openDialog()">Write a Message</button>
 
@@ -20,80 +20,67 @@
         <div class="main_title">
             <p class="title1">Messages</p>
         </div>
-        <mat-tab-group mat-align-tabs="end" animationDuration="0ms">
+        <mat-tab-group mat-align-tabs="end" [selectedIndex]="selectedTab" animationDuration="0ms" (selectedTabChange)="tabClick($event)">
             <mat-tab label="Receive">
-                <div class="row">
-                    <a class="detail_link" [routerLink]="['/message-detail']">
+                <div class="row" *ngIf="!noData">
+                    <a class="detail_link" *ngFor="let eachMsg of receiveMessageListing ">
                         <div class="sub_card">
                             <mat-toolbar>
-                                <h3 class="mat-card-title">Subject 1</h3>
-                                <p class="card_subtitle">By Dharmesh Bhalodiya</p>
+                                <h3 class="mat-card-title">{{eachMsg.subject}}</h3>
+                                <p class="card_subtitle">By {{eachMsg.sender}}</p>
                                 <span class="example-spacer"></span>
-                                <i class="fa fa-arrow-left icon"></i>
                                 <div class="time_class">
-                                    <p class="time_class">10 min ago</p>
+                                    <p class="time_class">{{eachMsg.created | dateAgo}}</p>
                                 </div>
-                            </mat-toolbar>
-                        </div>
-                    </a>
-                    <a class="detail_link" [routerLink]="['/message-detail']">
-                        <div class="sub_card">
-                            <mat-toolbar>
-                                <h3 class="mat-card-title">Subject 2</h3>
-                                <p class="card_subtitle">By Nevil</p>
-                                <span class="example-spacer"></span>
-                                <i class="fa fa-arrow-left icon"></i>
-                                <div class="time_class">
-                                    <p class="time_class">1 hour ago</p>
-                                </div>
+                                <i class="fa fa-trash icon" (click)="deleteDialog(eachMsg.id)"></i>
+                                <i class="fa fa-chevron-right icon" [routerLink]="['messagedetail', eachMsg.id]"></i>
                             </mat-toolbar>
                         </div>
                     </a>
                 </div>
+                <div class="no_data_content text-center" *ngIf="noData">
+                    <div class="">
+                        <img src="assets/no_data.png" alt="No Data" class="nodata_img">
+                        <p class="nodata_title">No Data Found</p>
+                    </div>
+                </div>
             </mat-tab>
+
             <mat-tab label="Sent">
-                <div class="row">
-                    <a class="detail_link" [routerLink]="['/message-detail']">
+                <div class="row" *ngIf="!noData">
+                    <a class="detail_link" *ngFor="let eachMessage of sentMessageListing ">
                         <div class="sub_card">
                             <mat-toolbar>
-                                <h3 class="mat-card-title">Subject 1</h3>
-                                <p class="card_subtitle">To Dharmesh Bhalodiya</p>
+                                <h3 class="mat-card-title">{{eachMessage.subject}}</h3>
+                                <p class="card_subtitle">To {{eachMessage.receiver}}</p>
                                 <span class="example-spacer"></span>
-                                <i class="fa fa-arrow-right icon"></i>
                                 <div class="time_class">
-                                    <p class="time_class">10 min ago</p>
-                                    
+                                    <p class="time_class">{{eachMessage.created | dateAgo}}</p>
                                 </div>
+                                <i class="fa fa-trash icon" (click)="deleteDialog(eachMessage.id)"></i>
+                                <i class="fa fa-chevron-right icon" [routerLink]="['messagedetail', eachMessage.id]"></i>
+
                             </mat-toolbar>
                         </div>
                     </a>
-                    <a class="detail_link" [routerLink]="['/message-detail']">
-                        <div class="sub_card">
-                            <mat-toolbar>
-                                <h3 class="mat-card-title">Subject 2</h3>
-                                <p class="card_subtitle">To Nevil</p>
-                                <span class="example-spacer"></span>
-                                <i class="fa fa-arrow-right icon"></i>
-                                <div class="time_class">
-                                    <p class="time_class">1 hour ago</p>
-                                </div>
-                            </mat-toolbar>
-                        </div>
-                    </a>
+                </div>
+                <div class="no_data_content text-center" *ngIf="noData">
+                    <div class="">
+                        <img src="assets/no_data.png" alt="No Data" class="nodata_img">
+                        <p class="nodata_title">No Data Found</p>
+                    </div>
                 </div>
             </mat-tab>
         </mat-tab-group>
     </mat-card>
-
-
-<!-- <footer>
-    <div class="copyright">
-        <span class="">&copy;copyright iView Labs Pvt. Ltd. {{currentYear}}</span>
-    
-    </div>
-</footer> -->
-
-
-
-
 </div>
+
+
+<footer>
+    <p>
+        <mat-toolbar>
+            <span class="copyright_text">&copy;Copyright {{currentYear}} by iView Labs Pvt. Ltd. All rights
+                reserved.</span>
+        </mat-toolbar>
+    </p>
+</footer>

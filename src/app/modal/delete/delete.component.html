@@ -1,0 +1,19 @@
+<div mat-dialog-title>
+    <mat-toolbar>
+        <span>
+            <div class="vl">
+                <p class="title">Delete</p>
+            </div>
+        </span>
+        <span class="example-spacer"></span>
+        <i class="fa fa-close" mat-dialog-close></i>
+    </mat-toolbar>
+</div>
+<div mat-dialog-content>
+    Are you sure! <br> You want to delete this message?
+</div>
+<div mat-dialog-actions>
+    <button class="yes_btn" mat-button (click)="deleteMessage()" [disabled]="isLoading">Yes</button>
+    <button class="no_btn" mat-button mat-dialog-close>No</button>
+
+</div>

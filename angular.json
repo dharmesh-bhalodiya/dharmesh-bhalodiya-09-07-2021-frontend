@@ -122,7 +122,7 @@
       }
     }
   },
-  "defaultProject": "angular",
+  "defaultProject": "message-app",
   "cli": {
     "analytics": "5f3acfcd-af9e-424f-8038-704279c9d75d"
   }

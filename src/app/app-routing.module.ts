@@ -21,7 +21,7 @@ const routes: Routes = [
     component: DashboardComponent
   },
   {
-    path: 'message-detail',
+    path: 'dashboard/messagedetail/:id',
     component: MessageDetailComponent
   }
 ];

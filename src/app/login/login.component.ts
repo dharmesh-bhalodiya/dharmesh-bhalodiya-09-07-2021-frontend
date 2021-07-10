@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
   submitted = false;
   returnUrl: string;
 
-
   constructor(
     private formBuilder: FormBuilder,
     private authenticationService: AuthenticationService,
@@ -29,14 +28,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
-      // password: ['', Validators.required]
     });
-
-    // reset login status
     this.authenticationService.logout();
-
-    // get return url from route parameters or default to '/'
-    // this.returnUrl = this.route.snapshot.queryParams['returnUrl']s || '/';
   }
 
   getError(el) {
@@ -57,8 +50,6 @@ export class LoginComponent implements OnInit {
 
   onSubmit(post) {
     this.submitted = true;
-
-    // stop here if form is invalid
     if (this.loginForm.invalid) {
       return;
     }
