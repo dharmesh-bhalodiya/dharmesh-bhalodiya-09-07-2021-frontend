@@ -16,12 +16,13 @@
 .mat-toolbar {
     background: transparent;
     color: #875cd4;
+    padding: 0px;
 }
 .mat-button {
     border: 2px solid #875cd4;
     font-size: 18px;
     padding: 1px 35px;
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
     color: #875cd4;
 }
 .mat-form-field {
@@ -43,4 +44,36 @@
     margin-top: 32px;
     padding: 8px;
     margin-left: 8px;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+}
+.container {
+    padding: 10px;
+}
+.form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    margin-top: -20px;
+}
+.form-element {
+    padding: 5px 0px 0px 2px;
+    width: 100%;
+}
+.button {
+    width: 35%;
+    margin: auto;
+    display: block;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+.fa-close {
+    margin-left: 12em;
+    margin-top: -30px;
+    cursor: pointer;
 }

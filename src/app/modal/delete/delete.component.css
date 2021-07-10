@@ -1,0 +1,53 @@
+.mat-dialog-container {
+    padding: 35px;
+}
+.vl {
+    border-left: 4px solid #875cd4;
+    height: 45px;
+    margin-bottom: 45px;
+    margin-top: 15px;
+
+}
+.title {
+    color: #875cd4;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 32px;
+    padding: 8px;
+    margin-left: 8px;
+}
+.mat-dialog-content {
+    font-size: 18px;
+    text-align: center;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+.mat-button {
+    border: 2px solid #875cd4;
+    color: #875cd4;
+    background-color: transparent !important;
+    padding: 0px 30px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.mat-dialog-actions {
+    justify-content: center;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+.fa-close {
+    margin-left: 12em;
+    margin-top: -55px;
+    cursor: pointer;
+}
+.mat-toolbar {
+    background: transparent;
+    color: #875cd4;
+    padding: 0px;
+}

@@ -37,9 +37,10 @@
     border-left: 4px solid #875cd4;
     height: 45px;
     margin-bottom: 45px;
+    margin-top: -20px !important;
 }
 .card_layout {
-    height: 330px;
+    height: 310px;
     border: 1px solid #d5d5d5;
 }
 .mat-card {

@@ -18,6 +18,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MessageDetailComponent } from './message-detail/message-detail.component';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ToastrModule } from 'ng6-toastr-notifications';
+import { DeleteComponent } from './modal/delete/delete.component';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 
 @NgModule({
@@ -27,6 +31,8 @@ import { MatTabsModule } from '@angular/material/tabs';
     DashboardComponent,
     ComposeModalComponent,
     MessageDetailComponent,
+    DeleteComponent,
+    DateAgoPipe,
 
   ],
   imports: [
@@ -43,7 +49,11 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatIconModule,
     MatDialogModule,
     MatGridListModule,
-    MatTabsModule
+    MatTabsModule,
+    ToastrModule.forRoot(),
+    NgxUiLoaderModule,
+
+
   ],
   providers: [
     AuthGuard,

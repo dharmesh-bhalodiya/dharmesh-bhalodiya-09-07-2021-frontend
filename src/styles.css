@@ -35,3 +35,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .fa-sign-out {
     margin-left: 5px;
 }
+.mat-tab-label {
+    min-width: 100px !important;
+}
+.mat-tab-nav-bar, .mat-tab-header {
+    border-bottom: 2px solid #d5d5d5 !important;
+}

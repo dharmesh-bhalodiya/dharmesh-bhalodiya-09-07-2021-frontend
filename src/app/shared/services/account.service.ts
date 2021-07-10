@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
-import { User } from '../_models';
 
 @Injectable({
   providedIn: 'root'
@@ -14,19 +13,26 @@ export class AccountService {
     private router: Router,
   ) { }
 
-//   getDuration(data){
-//     return this.httpClient.get(`${environment.API_URL}/duration`, {observe: 'response' , params : { type : data}});
-//   }
+  getSentMessageList(): any {
+     let username = localStorage.getItem("currentUser");
+    return this.http.get(`${environment.API_URL}/${username}/sent`, { observe: 'response' });
+  }
 
-// getSentMail(params){    
-//     return this.httpClient.get(`${environment.API_URL}/dharmesh/sent`,  {observe: 'response' , params});
-//   }
+  getReceiveMessageList(): any {
+    let username = localStorage.getItem("currentUser");
+    return this.http.get(`${environment.API_URL}/${username}/receive`, { observe: 'response' });
+  }
 
-getAll() {
-  return this.http.get<User[]>('${environment.API_URL}/dharmesh/sent');
-}
+  getMessageDetailById(id: any) {
+    return this.http.get(`${environment.API_URL}/${id}`, { observe: 'response' });
+  }
 
- 
+  sendMessage(data): any {
+    return this.http.post(`${environment.API_URL}`, data , { observe: 'response' });
+  } 
 
+  deleteMsg(id: any) {
+    return this.http.delete(`${environment.API_URL}/${id}`, { observe: 'response' });
+  }
 
 }
